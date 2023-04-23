@@ -3,43 +3,13 @@
 
 
 import streamlit as st
-from streamlit_option_menu import option_menu
 
 EXAMPLE_NO = 3
 
-def streamlit_menu(example=3):
-    if example == 3:
-        selected = option_menu(
-            menu_title=None,  # required
-            options=["Home"],
-            icons=["house"],
-            menu_icon="cast",  # optional
-            default_index=0,  # optional
-            orientation="horizontal",
-            styles={
-                "container": {"padding": "0!important", "background-color": "#fafafa"},
-                "icon": {"color": "orange", "font-size": "25px"},
-                "nav-link": {
-                    "font-size": "25px",
-                    "text-align": "left",
-                    "margin": "0px",
-                    "--hover-color": "#eee",
-                },
-                "nav-link-selected": {"background-color": "green"},
-            },
-        )
-        return selected
 
 
-selected = streamlit_menu(example=EXAMPLE_NO)
-
-if selected == "Home":
-    st.title("Lap Splitter")
 
 
-if selected == "Home":
-    Home = st.selectbox('Home: Select one option:', ['', 'Lap Splitter'], format_func=lambda x: 'Select an option' if x == '' else x)
-    if Home == 'Lap Splitter':
         st.markdown("# This will split laps")
         st.markdown("""
                     This is to split laps.
