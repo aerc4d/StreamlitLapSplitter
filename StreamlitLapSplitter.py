@@ -5,7 +5,7 @@ import streamlit as st
 st.markdown("# This will split laps")
 st.markdown("""This is to split laps.""")
 
-mins = st.number_input('Insert number of minutes')
+mins = st.number_input('Insert number of minutes', min_value=1)
 st.write('The number of minutes is ', mins)
 mins_secs = mins *60
 
@@ -20,7 +20,7 @@ hundreths_decimal = float(hundreths / 100)
 total_time_in_seconds = float(mins_secs + secs + hundreths_decimal)
 st.write(total_time_in_seconds)
 
-race_dist = st.number_input('Enter Race Distance:')
+race_dist = st.number_input('Enter Race Distance:', min_value=800)
 st.write('Race Distance ', race_dist)
 num_hundreds = int(race_dist / 100)
 st.write('Number of Hundreds: ', num_hundreds)
